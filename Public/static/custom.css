@@ -1,0 +1,9 @@
+*{
+	font-family: "微软雅黑" !important;
+}
+a:hover{
+	text-decoration: none;
+}
+.margin_top20{
+	margin-top: 20px;
+}

@@ -1,0 +1,47 @@
+<!--========================================导航条
+================================================== -->
+<!---start-header---->
+            <div class="header">
+                <div class="wrap">
+                <div class="logo">
+                    <!-- <img src="Public/Home/images/logo.png" title="logo" /> -->
+                   <img src="Public/Home/images/logo.png" alt="">
+                </div>
+                <div class="top-nav">
+                    <ul>
+                        <think:nav name="nav">
+                                        <eq name="nav.pid" value="0">
+                                        <li>
+                                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                                        </li>
+                                        </eq>
+                                    </think:nav>
+                                    <div class="pull-right">
+                                    <if condition="is_login()">
+                                    <ul class="nav" style="margin-right:0;width:145px;">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left:0;padding-right:0">{:get_username()} <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li style="width:70px;line-height:80px;"><a href="{:U('User/profile')}">修改密码</a></li>
+                                                <li style="width:70px;line-height:80px;"><a href="{:U('User/logout')}">退出</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <else/>
+                                    <ul class="nav" style="margin-right:0;width:170px;">
+                                        <li style="width:80px;">
+                                            <a href="{:U('User/login')}">登录</a>
+                                        </li>
+                                        <li style="width:80px;">
+                                            <a href="{:U('User/register')}">注册</a>
+                                        </li>
+                                    </ul>
+                                    </if>
+                                </div>
+                    </ul>
+                </div>
+
+                <div class="clear"> </div>
+            </div>
+        </div>
+            <!---End-header---->

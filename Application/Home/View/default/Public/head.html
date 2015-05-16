@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<title>{:C('WEB_SITE_TITLE')}</title>
+<link href="__STATIC__/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="__STATIC__/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="__STATIC__/bootstrap/css/docs.css" rel="stylesheet">
+<link href="__STATIC__/bootstrap/css/onethink.css" rel="stylesheet">
+<link href="__STATIC__/custom.css" rel="stylesheet">
+<link href="Public/Home/css/style.css" rel="stylesheet" type="text/css"  media="all" />	
+<link rel="stylesheet" href="Public/Home/css/responsiveslides.css">
+<script src="Public/Home/js/jquery.min.js"></script>
+<script src="Public/Home/js/responsiveslides.min.js"></script>
+		  <script>
+		    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 1
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 2500,
+			        speed: 600
+			      });
+			});
+		  </script>
+<style>
+	.logo{font-family: "微软雅黑";
+  }
+  .logo a{
+  	color:#fff;
+  }
+</style>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="__STATIC__/bootstrap/js/html5shiv.js"></script>
+<![endif]-->
+<block name="style"></block>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__STATIC__/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<!--<![endif]-->
+<!-- 页面header钩子，一般用于加载插件CSS文件和代码 -->
+{:hook('pageHeader')}
